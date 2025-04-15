@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMU Fix</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Navigation Bar -->
+        <nav class="sidebar">
+            <div class="search-header">
+                <h3>Search</h3>
+            </div>
+            <ul class="nav-menu">
+                <li class="active"><a href="#">HOTLINE</a></li>
+                <li><a href="#">Request</a></li>
+                <li><a href="#">Track</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <h3>Filter by</h3>
+                
+                <div class="filter-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Building
+                    </label>
+                    <select class="filter-dropdown">
+                        <option>Select building</option>
+                        <option>Boss House</option>
+                        <option>Morewood Gardens</option>
+                        <option>Stever House</option>
+                        <option>Resnik House</option>
+                        <option>West Wing</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Type
+                    </label>
+                    <select class="filter-dropdown">
+                        <option>Select type</option>
+                        <option>Heating</option>
+                        <option>Plumbing</option>
+                        <option>Electrical</option>
+                        <option>Furniture</option>
+                        <option>Internet</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Urgency
+                    </label>
+                    <div class="slider-container">
+                        <input type="range" min="1" max="5" value="3" class="urgency-slider">
+                        <div class="slider-labels">
+                            <span>Low</span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Search and Results Section -->
+            <section class="results-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Describe your issue...">
+                    <button>Search</button>
+                </div>
+
+                <div class="results-tabs">
+                    <button class="tab-button active" data-tab="resources">Resources</button>
+                    <button class="tab-button" data-tab="community">Community</button>
+                    <button class="tab-button" data-tab="auto-request">Auto Request</button>
+                </div>
+
+                <div class="tab-content active" id="resources">
+                    <div class="resource-item">
+                        <h4>Heating System Guide</h4>
+                        <p>PDF • CMU Maintenance</p>
+                        <p>Instructions for troubleshooting and operating dorm heating systems.</p>
+                        <button class="download-button">Download</button>
+                    </div>
+                    <div class="resource-item">
+                        <h4>Boss House Maintenance Manual</h4>
+                        <p>PDF • Housing Services</p>
+                        <p>Complete guide to all maintenance systems in Boss House.</p>
+                        <button class="download-button">Download</button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="community">
+                    <div class="community-post">
+                        <h4>No heat in Boss House room 305</h4>
+                        <p class="post-meta">Posted by cmu_student22 • 2 days ago • 14 comments</p>
+                        <p class="post-content">My heater hasn't been working since yesterday morning. Temperature drops to 60°F at night...</p>
+                    </div>
+                    <div class="community-post">
+                        <h4>Broken thermostat in Morewood E-Tower</h4>
+                        <p class="post-meta">Posted by andrewID • 1 week ago • 8 comments</p>
+                        <p class="post-content">Thermostat shows error code E5 and won't respond to any input...</p>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="auto-request">
+                    <form class="request-form">
+                        <div class="form-group">
+                            <label>Building</label>
+                            <select required>
+                                <option value="">Select building</option>
+                                <option selected>Boss House</option>
+                                <option>Morewood Gardens</option>
+                                <option>Stever House</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Issue Type</label>
+                            <select required>
+                                <option value="">Select type</option>
+                                <option selected>Heating</option>
+                                <option>Plumbing</option>
+                                <option>Electrical</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea required>My heater is not producing enough heat</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Urgency</label>
+                            <div class="slider-container">
+                                <input type="range" min="1" max="5" value="3" class="urgency-slider">
+                                <div class="slider-labels">
+                                    <span>Low</span>
+                                    <span>High</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button">Submit Request</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
