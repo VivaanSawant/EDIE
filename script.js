@@ -1,43 +1,44 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Tab switching functionality
-    const tabButtons = document.querySelectorAll('.results-tabs button');
-    const tabContents = document.querySelectorAll('.results-section > div:not(.results-tabs):not(.results-count)');
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
     
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Remove active class from all buttons and contents
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active-tab'));
+            tabContents.forEach(content => content.classList.remove('active'));
             
             // Add active class to clicked button
             this.classList.add('active');
             
             // Show corresponding content
-            const tabName = this.textContent.trim().toLowerCase().replace(' ', '-');
-            document.querySelector(`.${tabName}-results`).classList.add('active-tab');
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
         });
     });
     
-    // Set the first tab as active by default
+    // Initialize first tab as active
     if (tabButtons.length > 0) {
         tabButtons[0].click();
     }
     
-    // Urgency button functionality
-    const urgencyButtons = document.querySelectorAll('.urgency-buttons button');
-    urgencyButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            urgencyButtons.forEach(btn => {
-                btn.classList.remove('active');
-                btn.style.backgroundColor = '';
-            });
-            
-            this.classList.add('active');
-            if (this.classList.contains('high')) {
-                this.style.backgroundColor = '#ff9999';
-            } else if (this.classList.contains('low')) {
-                this.style.backgroundColor = '#99ff99';
-            }
+    // Update slider value display
+    const sliders = document.querySelectorAll('.urgency-slider');
+    sliders.forEach(slider => {
+        slider.addEventListener('input', function() {
+            // You could display the value if needed
+            // console.log(this.value);
         });
     });
+    
+    // Form submission
+    const requestForm = document.querySelector('.request-form');
+    if (requestForm) {
+        requestForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your maintenance request has been submitted!');
+            // In a real app, you would send this data to a server
+        });
+    }
 });
