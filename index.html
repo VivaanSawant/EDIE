@@ -3,24 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMU Fix - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CMU Fix - Campus Maintenance Solution</title>
+    <link rel="stylesheet" href="css/landingpage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>CMU Fix</h1>
-        <p>Your solution for campus maintenance issues</p>
-    </header>
-    
-    <main>
-        <section class="welcome">
-            <p>Welcome to CMU Fix. Get help with maintenance issues in your dorm or campus building.</p>
-            <a href="hotline.html" class="cta-button">Get Started</a>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 CMU Fix</p>
-    </footer>
+    <div class="landing-container">
+        <header class="landing-header">
+            <div class="logo">
+                <span class="logo-cmu">CMU</span>
+                <span class="logo-fix">Fix</span>
+            </div>
+            <nav class="landing-nav">
+                <a href="hotline.html" class="nav-link">Go to App</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+        </header>
+
+        <main class="landing-main">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Your Campus Maintenance Solution</h1>
+                    <p class="hero-subtitle">Quickly report and resolve dorm issues with CMU's dedicated maintenance platform</p>
+                    <a href="hotline.html" class="cta-button">Get Started Now</a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder"></div>
+                </div>
+            </section>
+
+            <section id="features" class="features-section">
+                <h2 class="section-title">Why Use CMU Fix?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Quick Reporting</h3>
+                        <p>Submit maintenance requests in seconds with our streamlined process</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Helpful Resources</h3>
+                        <p>Access troubleshooting guides and manuals for common issues</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Community Support</h3>
+                        <p>See how others resolved similar issues in your building</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor the status of your requests from submission to resolution</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <h2 class="section-title">About CMU Fix</h2>
+                <div class="about-content">
+                    <p>CMU Fix was developed by students for students to simplify the process of reporting and resolving maintenance issues in campus housing.</p>
+                    <p>Our platform connects you directly with maintenance staff while providing helpful resources to potentially resolve issues yourself.</p>
+                    <a href="hotline.html" class="cta-button secondary">Try It Now</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="landing-footer">
+            <div class="footer-content">
+                <div class="logo">
+                    <span class="logo-cmu">CMU</span>
+                    <span class="logo-fix">Fix</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
