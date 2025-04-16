@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const sliders = document.querySelectorAll('.urgency-slider');
     sliders.forEach(slider => {
         slider.addEventListener('input', function() {
-            // You could display the value if needed
-            // console.log(this.value);
         });
     });
     
@@ -38,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         requestForm.addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Your maintenance request has been submitted!');
-            // In a real app, you would send this data to a server
         });
     }
 });

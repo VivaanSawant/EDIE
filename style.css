@@ -324,6 +324,10 @@ body {
 }
 
 .logo {
+    position: absolute;
+    left: 8%;
+    top: 0%;
+    transform: translateX(-50%);
     font-size: 1.8rem;
     font-weight: 700;
 }
