@@ -166,7 +166,7 @@ body {
     color: #666;
 }
 
-/* Results Section Styles */
+/* results sect */
 .results-section {
     flex: 1;
     background: white;
@@ -323,7 +323,20 @@ body {
     margin-top: 10px;
 }
 
-/* Responsive Design */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo-cmu {
+    color: #ffffff; /* now white */
+}
+
+.logo-fix {
+    color: #101010;
+}
+
+
 @media (max-width: 768px) {
     .app-container {
         flex-direction: column;
