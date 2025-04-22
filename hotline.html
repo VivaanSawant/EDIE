@@ -55,9 +55,9 @@
                         <span class="checkmark"></span>
                         Type
                     </label>
-                    <select class="filter-dropdown">
+                    <select class="filter-dropdown" id="type-selector">
                         <option>Select type</option>
-                        <option>Heating</option>
+                        <option value="heating">Heating</option>
                         <option>Plumbing</option>
                         <option>Electrical</option>
                         <option>Furniture</option>
@@ -96,13 +96,16 @@
                 </div>
 
                 <div class="tab-content active" id="resources">
-                    <div class="pdf-viewer-container">
-                        <embed 
-                            src="Boss McGill Tip Sheet.pdf" 
-                            type="application/pdf" 
+                    <div class="empty-state" id="resources-empty">
+                        Enter search query
+                    </div>
+                    <div id="pdf-container" style="display:none;">
+                        <iframe 
+                            src="Boss McGill Tip Sheet.pdf#toolbar=0&navpanes=0" 
                             width="100%" 
                             height="600px"
-                            class="pdf-embed">
+                            class="pdf-frame">
+                        </iframe>
                     </div>
                 </div>
 

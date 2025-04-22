@@ -354,6 +354,24 @@ body {
     min-height: 600px;
 }
 
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.2rem;
+    border: 2px dashed #eee;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.pdf-frame {
+    border: none;
+    min-height: 600px;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
 
 @media (max-width: 768px) {

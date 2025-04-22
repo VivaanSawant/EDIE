@@ -38,4 +38,22 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Your maintenance request has been submitted!');
         });
     }
+
+
+    const typeSelector = document.getElementById('type-selector');
+    const pdfContainer = document.getElementById('pdf-container');
+    const resourcesEmpty = document.getElementById('resources-empty');
+
+    if (typeSelector && pdfContainer && resourcesEmpty) {
+        typeSelector.addEventListener('change', function() {
+            if (this.value === 'heating') {
+                pdfContainer.style.display = 'block';
+                resourcesEmpty.style.display = 'none';
+            } else {
+                pdfContainer.style.display = 'none';
+                resourcesEmpty.style.display = 'block';
+            }
+        });
+    }
+
 });
