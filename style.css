@@ -340,6 +340,21 @@ body {
     color: #101010;
 }
 
+.pdf-viewer-container {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pdf-embed {
+    display: block;
+    border: none;
+    min-height: 600px;
+}
+
+
 
 @media (max-width: 768px) {
     .app-container {
