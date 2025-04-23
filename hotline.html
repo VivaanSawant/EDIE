@@ -8,19 +8,19 @@
 </head>
 <body>
     <div class="app-container">
-        <!-- left nav barweeee -->
+        <!-- Left Nav Bar -->
         <nav class="sidebar">
-            <a href = "index.html">
+            <a href="index.html">
                 <div class="logo">
-                    <span class="logo-cmu">  CMU</span>
+                    <span class="logo-cmu">CMU</span>
                     <span class="logo-fix">Fix</span>
                 </div>
             </a>
             <ul class="nav-menu">
-                <li class="active"><a href="#">Search</a></li>
-                <li><a href="#">Request</a></li>
-                <li><a href="#">Track</a></li>
-                <li><a href="#">Chat</a></li>
+                <li class="active"><a href="#" data-tab="resources">Search</a></li>
+                <li><a href="#" data-tab="auto-request">Request</a></li>
+                <li><a href="#" id="track-button">Track</a></li> <!-- Changed this line -->
+                <li><a href="#" data-tab="community">Chat</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Feedback</a></li>
             </ul>
@@ -95,6 +95,7 @@
                     <button class="tab-button" data-tab="auto-request">Auto Request</button>
                 </div>
 
+                <!-- Resources Tab -->
                 <div class="tab-content active" id="resources">
                     <div class="empty-state" id="resources-empty">
                         Enter search query
@@ -109,6 +110,7 @@
                     </div>
                 </div>
 
+                <!-- Community Tab -->
                 <div class="tab-content" id="community">
                     <div class="community-post">
                         <h4>No heat in McGill House room 305</h4>
@@ -122,13 +124,13 @@
                     </div>
                 </div>
 
+                <!-- Auto Request Tab -->
                 <div class="tab-content" id="auto-request">
                     <form class="request-form">
                         <div class="form-group">
                             <label>Building</label>
                             <select required>
                                 <option value="">Select building</option>
-                                <option selected>Select building</option>
                                 <option>Morewood Gardens</option>
                                 <option>Stever House</option>
                                 <option>Donner House</option>
@@ -140,7 +142,7 @@
                             <label>Issue Type</label>
                             <select required>
                                 <option value="">Select type</option>
-                                <option selected>Heating</option>
+                                <option>Heating</option>
                                 <option>Plumbing</option>
                                 <option>Electrical</option>
                             </select>
@@ -161,6 +163,14 @@
                         </div>
                         <button type="submit" class="submit-button">Submit Request</button>
                     </form>
+                </div>
+
+                <!-- Track Tab -->
+                <div class="tab-content" id="track">
+                    <div class="calendar-view">
+                        <h2 class="calendar-header">Your Calendar</h2>
+                        <img src="calendar.png" alt="Maintenance Calendar" class="calendar-image">
+                    </div>
                 </div>
             </section>
         </main>

@@ -14,7 +14,22 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show corresponding content
             const tabId = this.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
+            
+            // Special case for Track button
+            if (tabId === 'track') {
+                document.getElementById('track').classList.add('active');
+                // Hide filters section when in calendar view
+                document.querySelector('.filters-section').style.display = 'none';
+                // Expand main content area
+                document.querySelector('.results-section').style.width = '100%';
+            } else {
+                // Regular tab behavior
+                document.getElementById(tabId).classList.add('active');
+                // Show filters section for other tabs
+                document.querySelector('.filters-section').style.display = 'block';
+                // Reset main content width
+                document.querySelector('.results-section').style.width = '';
+            }
         });
     });
     
@@ -27,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sliders = document.querySelectorAll('.urgency-slider');
     sliders.forEach(slider => {
         slider.addEventListener('input', function() {
+            // You can add slider value display logic here if needed
         });
     });
     
@@ -39,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
+    // PDF visibility based on type selection
     const typeSelector = document.getElementById('type-selector');
     const pdfContainer = document.getElementById('pdf-container');
     const resourcesEmpty = document.getElementById('resources-empty');
@@ -55,5 +71,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
 });
